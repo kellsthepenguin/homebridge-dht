@@ -1,16 +1,15 @@
 {
-  "private": true,
-  "displayName": "Plugin Name",
-  "name": "homebridge-plugin-name",
+  "displayName": "Homebridge DHT22",
+  "name": "homebridge-dht22",
   "version": "1.0.0",
-  "description": "A short description about what your plugin does.",
+  "description": "DHT22 with homebridge",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/USERNAME/GITHUB_PROJECT_NAME.git"
+    "url": "https://github.com/kellsthepenguin/homebridge-dht22.git"
   },
   "bugs": {
-    "url": "https://github.com/USERNAME/GITHUB_PROJECT_NAME/issues"
+    "url": "https://github.com/kellsthepenguin/homebridge-dht22/issues"
   },
   "engines": {
     "node": ">=14.18.1",
@@ -20,7 +19,7 @@
   "scripts": {
     "lint": "eslint src/**.ts --max-warnings=0",
     "watch": "npm run build && npm link && nodemon",
-    "build": "rimraf ./dist && tsc",
+    "build": "tsc",
     "prepublishOnly": "npm run lint && npm run build"
   },
   "keywords": [
@@ -34,7 +33,6 @@
     "eslint": "^8.0.1",
     "homebridge": "^1.3.5",
     "nodemon": "^2.0.13",
-    "rimraf": "^3.0.2",
     "ts-node": "^10.3.0",
     "typescript": "^4.4.4"
   }
