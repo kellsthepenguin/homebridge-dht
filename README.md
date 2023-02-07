@@ -7,4 +7,4 @@
 3. Done!
 
 ## Wiring Example
-![wiring](https://user-images.githubusercontent.com/37768795/217142794-9208263d-686d-452c-a2de-307b390b4b2d.svg)
+![wiring](https://user-images.githubusercontent.com/37768795/217203466-17b8c5ab-8d46-4f36-876b-860bab4ca017.svg)
