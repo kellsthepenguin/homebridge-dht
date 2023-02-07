@@ -1,5 +1,6 @@
-import { Service, PlatformAccessory } from 'homebridge';
+import { PlatformAccessory } from 'homebridge';
 import { Dht22HomebridgePlatform } from './platform';
+import sensor from 'node-dht-sensor';
 
 /**
  * Platform Accessory
@@ -12,7 +13,15 @@ export class Dht22PlatformAccessory {
     private readonly accessory: PlatformAccessory,
   ) {
     const humiditySensor = this.accessory.getService('Humidity Sensor') || this.accessory.addService(this.platform.Service.HumiditySensor, 'Humidity Sensor', 'HMDTS');
-    
-    humiditySensor.setCharacteristic(this.platform.Characteristic.CurrentRelativeHumidity, 50)
+    const temperatureSendsor = this.accessory.getService('Temperature Sensor') || this.accessory.addService(this.platform.Service.TemperatureSensor, 'Temperature Sensor', 'TPRTS')
+
+    setInterval(() => {
+      sensor.read(22, 4, (err: NodeJS.ErrnoException | null, temperature: number, humidity: number) => {
+        if (!err) {
+          humiditySensor.setCharacteristic(this.platform.Characteristic.CurrentRelativeHumidity, humidity)
+          temperatureSendsor.setCharacteristic(this.platform.Characteristic.CurrentTemperature, temperature)
+        }
+      })
+    }, 1000);
   }
 }
