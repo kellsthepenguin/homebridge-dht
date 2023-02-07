@@ -1,6 +1,6 @@
 {
   "displayName": "Homebridge DHT Plugin",
-  "name": "homebridge-dht",
+  "name": "homebridge-dht-plugin",
   "version": "1.0.0",
   "description": "DHT with homebridge",
   "license": "Apache-2.0",
