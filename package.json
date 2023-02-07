@@ -1,5 +1,5 @@
 {
-  "displayName": "Homebridge DHT22",
+  "displayName": "Homebridge DHT22 Plugin",
   "name": "homebridge-dht22",
   "version": "1.0.0",
   "description": "DHT22 with homebridge",
