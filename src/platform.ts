@@ -56,13 +56,9 @@ export class Dht22HomebridgePlatform implements DynamicPlatformPlugin {
     // or a user-defined array in the platform config.
     const exampleDevices = [
       {
-        exampleUniqueId: 'ABCD',
-        exampleDisplayName: 'Bedroom',
-      },
-      {
-        exampleUniqueId: 'EFGH',
-        exampleDisplayName: 'Kitchen',
-      },
+        exampleUniqueId: 'awpeoijerf4w39cq0i3qw',
+        exampleDisplayName: this.config.roomName,
+      }
     ];
 
     // loop over the discovered devices and register each one if it has not already been registered
